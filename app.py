@@ -22,6 +22,7 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded['originalDetectlntentRequest']['payload']['replyToken']
     userText = decoded['queryResult']['intent']['message']['displayName']
+    #sendText(user,userText)
     if (userText == 'สวัสดี') :
         sendText(user,'สวัสดีจ้า')
     elif (userText == 'ไอ้บ้า') :
